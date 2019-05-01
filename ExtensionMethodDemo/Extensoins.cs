@@ -21,5 +21,14 @@ namespace ExtensionMethodDemo
             }
             return input;
         }
+
+        /**Extension Method For int Type To calculate the age from DateTime Input as The Date Of Birth*/
+        public static int CalculateAge(this DateTime DateOfBirth)
+        {
+            var age = DateTime.Today.Year - DateOfBirth.Year;
+            if (DateOfBirth.AddYears(age) > DateTime.Today)
+                age--;
+            return age;
+        }
     }
 }

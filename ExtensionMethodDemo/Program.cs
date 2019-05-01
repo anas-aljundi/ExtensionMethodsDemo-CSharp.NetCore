@@ -12,6 +12,10 @@ namespace ExtensionMethodDemo
             /**Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type.*/
             string result = inputString.ChangeFirstLetter();
             Console.WriteLine(result);
+            DateTime TheBirthDay = new DateTime(1989, 1, 1);
+            int currentAge = TheBirthDay.CalculateAge();
+            Console.WriteLine("the date of birth is" + TheBirthDay);
+            Console.WriteLine("So The Age will be : " + currentAge);
         }
     }
 }
